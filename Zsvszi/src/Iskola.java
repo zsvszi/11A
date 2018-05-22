@@ -7,14 +7,21 @@ public class Iskola {
 		String[] data = line.split(";") 			;
 		int jegyek[] = new int[line.length()-3] 	;
 		double atlag = 0 							;
-		for (int i = 3  ; i < data.length;i++)
+		if (line.length()-3>=3)
 		{
-			int temp = Integer.parseInt(data[i])	;
-			System.out.println(temp)				;
-			atlag = atlag + temp 					;
+			for (int i = 3  ; i < data.length;i++)
+			{
+				int temp = Integer.parseInt(data[i])	;
+				System.out.println(temp)				;
+				atlag = atlag + temp 					;
+			}
+			atlag = atlag / (data.length-3) 			;
+			System.out.printf("Tanulmányi átlag:%.2f",atlag);
 		}
-		atlag = atlag / (data.length-3) 			;
-		System.out.printf("Tanulmányi átlag:%.2f",atlag);
+		else
+		{
+			System.out.println("Nincs elég jegy az átlag meghtározásához..");
+		}
 	}
 
 }
