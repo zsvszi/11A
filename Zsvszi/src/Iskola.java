@@ -16,7 +16,7 @@ public class Iskola {
 				atlag = atlag + temp 					;
 			}
 			atlag = atlag / (data.length-3) 			;
-			System.out.printf("Tanulmányi átlag:%.2f",atlag);
+			System.out.printf("Tanulmányi átlag:%.3f",atlag);
 		}
 		else
 		{
